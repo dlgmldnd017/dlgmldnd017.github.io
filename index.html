@@ -1,75 +1,40 @@
-/*global $, document, setTimeout, i*/
-$(document).ready(function () {
+<div class="intro">
+   <div class="animated-bar"></div>
 
-    'use strict';
+   <div class="slide slide-a">
+      <div class="slide-content">
+         <p class="slide-a-child">Hi There!</p>
+         <h1 class="slide-a-child">My name is Mohamed</h1>
+         <p class="slide-a-child">I'm a Front End web developer</p>
+      </div>
+   </div>
 
-    var slide  = $('.slide'),
-        slideAelements = $('.slide-a-child'),
-        slideBelements = $('.slide-b-child'),
-        slideCelements = $('.slide-c-child'),
-        slideDelements = $('.slide-d-child'),
-        replay = $('button.replay');
+   <div class="slide slide-b">
+      <div class="slide-content">
+         <h2 class="slide-b-child">what I do</h2>
+         <p class="slide-b-child">I design modern, clean and creative websites</p>
+         <p class="slide-b-child">And make them alive on the internet</p>
+      </div>
+   </div>
 
+   <div class="slide slide-c">
+      <div class="slide-content">
+         <h2 class="slide-c-child">What I use</h2>
+         <ul>
+            <li class="slide-c-child"><p>Adobe Photoshop</p></li>
+            <li class="slide-c-child"><p>HTML5</p></li>
+            <li class="slide-c-child"><p>CSS3</p></li>
+            <li class="slide-c-child"><p>Javascript</p></li>
+         </ul>
+      </div>
+   </div>
 
+   <div class="slide slide-d">
+      <div class="slide-content">
+         <h2 class="slide-d-child">Thanks for watching </h2>
+         <p class="slide-d-child">You can check me on <a href="http://mohamdhasan.pro/" target="_blank">Mohamdhasan.pro</a></p>
+         <button class="slide-d-child replay">Replay</button>
+      </div>
+   </div>
 
-    slide.each(function (i) {
-        if (i < 3) {
-            setTimeout(function () {
-                slide.eq(i).fadeOut();
-            }, 5000 * (i + 1));
-        }
-    });
-
-
-    function animateSlideA() {
-      slideAelements.each(function (i) {
-          setTimeout(function () {
-              slideAelements.eq(i).addClass('is-visible');
-          }, 300 * (i + 1));
-      });
-    }
-
-    function animateSlideB() {
-      slideBelements.each(function (i) {
-          setTimeout(function () {
-              slideBelements.eq(i).addClass('is-visible');
-          }, 300 * (i + 1));
-      });
-   }
-
-     function animateSlideC() {
-      slideCelements.each(function (i) {
-          setTimeout(function () {
-              slideCelements.eq(i).addClass('is-visible');
-          }, 150 * (i + 1));
-      });
-    }
-
-    function animateSlideD() {
-      slideDelements.each(function (i) {
-          setTimeout(function () {
-              slideDelements.eq(i).addClass('is-visible');
-          }, 300 * (i + 1));
-      });
-    }
-
-    animateSlideA();
-
-    setTimeout(function () {
-       animateSlideB();
-    }, 5000);
-
-    setTimeout(function () {
-       animateSlideC();
-    }, 10000);
-
-    setTimeout(function () {
-       animateSlideD();
-    }, 15000);
-
-
-   replay.on('click', function () {
-     location.reload(true);
-   });
-
-});
+</div>
